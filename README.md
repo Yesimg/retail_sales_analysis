@@ -1,3 +1,4 @@
+check the result here 👉 [Customer Growth Copilot.pdf](https://github.com/user-attachments/files/28588077/Customer.Growth.Copilot.pdf)
 # Customer Growth Copilot: A Data-Driven Solution for Retail Leadership
 
 ## 🎯 The Challenge
@@ -10,7 +11,6 @@ The question was simple but urgent: *How do we turn raw transactional data into 
 
 I started by **extracting customer shopping behavior data from our SAP environment** and began the tedious work of data cleaning—standardizing column names, handling missing values, deriving meaningful metrics. But instead of stopping there, I realized we needed **automation at scale**.
 
-The solution wasn't just better data—it was **interactive, real-time intelligence that leadership could control.**
 
 ## 💡 The Solution: Customer Growth Copilot
 
