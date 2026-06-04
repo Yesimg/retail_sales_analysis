@@ -11,17 +11,6 @@ Original file is located at
 
 """# Streamlit Interactive Dashboard"""
 
-# Note: In Colab notebooks `%pip install streamlit` is valid magic. In a
-# standalone Python script this should be installed externally. Commenting
-# out the notebook magic to avoid SyntaxError when running as a .py file.
-# %pip install streamlit
-
-import streamlit as st
-import pandas as pd
-import numpy as np
-import plotly.express as px
-import plotly.graph_objects as go
-from sklearn.preprocessing import MinMaxScaler
 
 # ── PAGE CONFIG ───────────────────────────────────────────────────────────────
 st.set_page_config(
