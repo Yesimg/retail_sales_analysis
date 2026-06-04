@@ -1,16 +1,26 @@
+# 🛍️ Retail Sales Analysis - Customer Growth Copilot
+
+## 🔗 **[📊 OPEN DASHBOARD FOR RECRUITERS](https://yesimg-retail-sales.streamlit.app/)** ← Click Here
+
+---
+
 check the result here 👉 [Customer Growth Copilot.pdf](https://github.com/user-attachments/files/28588077/Customer.Growth.Copilot.pdf)
+
 # Customer Growth Copilot: A Data-Driven Solution for Retail Leadership
 
 ## 🎯 The Challenge
 
-As a supply chain analyst, One of the most recurrent pain point was: **data from SAP systems was complex, fragmented, and slow to process.** Every time leadership needed customer insights, it took days of manual data cleaning and transformation. Spreadsheets, pivot tables, and static reports couldn't keep pace with business decisions that needed to happen in hours, not weeks.
+As a supply chain analyst, One of the most recurrent pain point was: **data from SAP systems was complex, fragmented, and slow to process.** Every time leadership needed customer insights, it took days to manually extract, clean, and analyze data—all while business decisions waited.
 
 The question was simple but urgent: *How do we turn raw transactional data into actionable intelligence fast?*
 
 ## 🚀 The Journey
 
-I started by **extracting customer shopping behavior data from our SAP environment** and began the tedious work of data cleaning—standardizing column names, handling missing values, deriving meaningful metrics. But instead of stopping there, I realized we needed **automation at scale**.
+I started by **extracting customer shopping behavior data from our SAP environment** and began the tedious work of data cleaning—standardizing column names, handling missing values, deriving meaningful metrics. But I realized static reports were just the beginning. 
 
+What if leadership could **explore data interactively**? What if they could ask "what if" questions and get answers instantly? What if they could adjust priorities and watch insights shift in real-time?
+
+That's when I built the **Customer Growth Copilot**.
 
 ## 💡 The Solution: Customer Growth Copilot
 
@@ -27,7 +37,8 @@ The dashboard automatically segments **all customers into 4 strategic tiers** ba
 
 ### 🎚️ Flexible, Business-Driven Weights
 
-Unlike static reports, leadership can **instantly adjust how the system weights customer value**—prioritizing subscription loyalty, purchase frequency, spending patterns, or review sentiment—and watch segmentation update in real-time. This means:
+Unlike static reports, leadership can **instantly adjust how the system weights customer value**—prioritizing subscription loyalty, purchase frequency, spending patterns, or review sentiment—all without touching code.
+
 - Marketing can test "what if" scenarios instantly
 - Regional managers can apply different strategies
 - No technical barriers to exploring data
@@ -66,6 +77,38 @@ By democratizing access to analytics, this tool shifts the organization toward d
 
 ## 🏁 The Bottom Line
 
-What started as a struggle to clean SAP data became a strategic asset. The **Customer Growth Copilot** isn't just a dashboard—it's an **automation engine that gives retail leadership the visibility they need to grow customer lifetime value, reduce churn, and respond to market changes in real-time.**
+What started as a struggle to clean SAP data became a strategic asset. The **Customer Growth Copilot** isn't just a dashboard—it's an **automation engine that gives retail leadership the visibility they need to act fast**.
 
 **In retail, every day without customer insights is money left on the table. This solution puts that intelligence in the hands of the people who need it most.**
+
+---
+
+## 🚀 Quick Start
+
+### Run Locally
+
+```bash
+git clone https://github.com/Yesimg/retail_sales_analysis.git
+cd retail_sales_analysis
+pip install -r requirements.txt
+streamlit run customer_growth_copilot.py
+```
+
+Then upload the `customer_shopping_behavior.csv` file to get started.
+
+## 📊 Key Features
+
+- Interactive customer segmentation
+- Real-time KPI metrics
+- Adjustable scoring weights
+- Segment performance analytics
+- Actionable recommendations
+- Customer explorer with search & export
+
+## 🛠️ Tech Stack
+
+**Streamlit** | **Pandas** | **NumPy** | **Plotly** | **Scikit-learn** | **Python**
+
+---
+
+**👤 Built by:** Yesica Magnoli | **Portfolio:** [yesimg.github.io](https://yesimg.github.io/)
