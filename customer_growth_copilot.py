@@ -11,8 +11,6 @@ Original file is located at
 
 """# Streamlit Interactive Dashboard"""
 
-!pip install streamlit
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -20,7 +18,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from sklearn.preprocessing import MinMaxScaler
 
-# ── PAGE CONFIG ───────────────────────────────────────────────────────────────
+# ── PAGE CONFIG ───────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="Customer Growth Copilot",
     page_icon="🛍️",
@@ -51,7 +49,9 @@ SEG_ORDER  = ['VIP', 'Healthy', 'At Risk', 'Critical']
 def load_data(file) -> pd.DataFrame:
     if file is None: # Added check for None file
         return pd.DataFrame() # Return empty DataFrame if no file
-    df = pd.read_csv('customer_shopping_behavior.csv')
+    
+    # FIX: Read from uploaded file parameter instead of hardcoded path
+    df = pd.read_csv(file)
     df.columns = df.columns.str.lower().str.replace(' ', '_')
 
     # Rename purchase amount column regardless of whether it has (usd) suffix
@@ -123,7 +123,7 @@ def apply_weights(cdf: pd.DataFrame, weights: dict) -> pd.DataFrame:
     return out
 
 
-# ── SIDEBAR ───────────────────────────────────────────────────────────────────
+# ── SIDEBAR ─────────────────────────────────────────────────────────────
 with st.sidebar:
     st.image("https://img.icons8.com/fluency/96/shopping-bag.png", width=60)
     st.title("Customer Growth\nCopilot")
@@ -178,7 +178,7 @@ with st.sidebar:
     sel_seg = st.multiselect("Segment", SEG_ORDER, default=SEG_ORDER)
 
 
-# ── SCORE & FILTER ────────────────────────────────────────────────────────────
+# ── SCORE & FILTER ──────────────────────────────────────────────────────────
 # apply_weights is fast (no I/O) so no caching needed
 scored_df = apply_weights(customer_df, normalized_weights)
 
@@ -196,13 +196,13 @@ else:
 
 # Only display the rest of the app if fdf is not empty
 if not fdf.empty:
-    # ── HEADER ────────────────────────────────────────────────────────────────────
+    # ── HEADER ──────────────────────────────────────────────────────────
     st.title("🛍️ Customer Growth Copilot")
     st.caption(f"Showing **{len(fdf):,}** of {len(scored_df):,} customers · Adjust filters & weights in the sidebar")
     st.markdown("---")
 
 
-    # ── KPI CARDS ─────────────────────────────────────────────────────────────────
+    # ── KPI CARDS ───────────────────────────────────────────────────────────
     def kpi(col, val, label, color):
         col.markdown(f"""
         <div class="metric-card" style="border-color:{color}">
@@ -304,7 +304,7 @@ if not fdf.empty:
         st.plotly_chart(fig_bar, use_container_width=True)
 
 
-    # ── ACTION MAP ────────────────────────────────────────────────────────────────
+    # ── ACTION MAP ──────────────────────────────────────────────────────────
     st.markdown("---")
     st.subheader("📋 Recommended Actions by Segment")
     actions = {
@@ -327,7 +327,7 @@ if not fdf.empty:
         </div>""", unsafe_allow_html=True)
 
 
-    # ── CUSTOMER EXPLORER ─────────────────────────────────────────────────────────
+    # ── CUSTOMER EXPLORER ────────────────────────────────────────────────────────
     st.markdown("---")
     st.subheader("🔎 Customer Explorer")
 
