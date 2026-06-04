@@ -51,7 +51,7 @@ SEG_ORDER  = ['VIP', 'Healthy', 'At Risk', 'Critical']
 def load_data(file) -> pd.DataFrame:
     if file is None: # Added check for None file
         return pd.DataFrame() # Return empty DataFrame if no file
-    df = pd.read_csv(file)
+    df = pd.read_csv('customer_shopping_behavior.csv')
     df.columns = df.columns.str.lower().str.replace(' ', '_')
 
     # Rename purchase amount column regardless of whether it has (usd) suffix
