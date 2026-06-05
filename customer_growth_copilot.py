@@ -11,6 +11,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 from sklearn.preprocessing import MinMaxScaler
+import os
 
 # ── PAGE CONFIG (MUST BE FIRST) ───────────────────────────────────────────────
 st.set_page_config(
@@ -43,7 +44,7 @@ SEG_ORDER  = ['VIP', 'Healthy', 'At Risk', 'Critical']
 def load_data(file) -> pd.DataFrame:
     if file is None: # Added check for None file
         return pd.DataFrame() # Return empty DataFrame if no file
-    df = pd.read_csv('customer_shopping_behavior.csv')
+    df = pd.read_csv(file)
     df.columns = df.columns.str.lower().str.replace(' ', '_')
 
     # Rename purchase amount column regardless of whether it has (usd) suffix
@@ -115,19 +116,45 @@ def apply_weights(cdf: pd.DataFrame, weights: dict) -> pd.DataFrame:
     return out
 
 
-# ── SIDEBAR ─────────────────────────────────────────────────────────────────────
+# ── SIDEBAR ───────────────────────────────────────────────────────────────────
 with st.sidebar:
     st.image("https://img.icons8.com/fluency/96/shopping-bag.png", width=60)
     st.title("Customer Growth\nCopilot")
     st.markdown("---")
 
-    uploaded = st.file_uploader("Upload CSV", type="csv")
-    if not uploaded:
-        st.info("Upload your `customer_shopping_behavior.csv` to get started.")
-        # st.stop() # Removed st.stop() here as it doesn't fully halt execution in Colab
+    # ── DATA SOURCE SELECTION ─────────────────────────────────────────────────
+    st.markdown("### 📊 Data Source")
+    
+    # Check if default CSV exists
+    default_csv_exists = os.path.exists('customer_shopping_behavior.csv')
+    
+    data_source = st.radio(
+        "Choose data source:",
+        ["Use default CSV", "Upload custom CSV"] if default_csv_exists else ["Upload custom CSV"],
+        label_visibility="collapsed"
+    )
+    
+    file_to_load = None
+    data_source_label = ""
+    
+    if data_source == "Use default CSV" and default_csv_exists:
+        file_to_load = 'customer_shopping_behavior.csv'
+        data_source_label = "✅ Using: customer_shopping_behavior.csv"
+    elif data_source == "Upload custom CSV" or not default_csv_exists:
+        uploaded = st.file_uploader("Upload CSV", type="csv")
+        if uploaded:
+            file_to_load = uploaded
+            data_source_label = f"✅ Using: {uploaded.name}"
+        else:
+            st.info("📁 Drag and drop your CSV file or browse to select one.")
+    
+    if data_source_label:
+        st.caption(data_source_label)
+    
+    st.markdown("---")
 
     # Load & build — these only rerun when the file changes
-    raw_df     = load_data(uploaded)
+    raw_df     = load_data(file_to_load)
     customer_df = build_customer_df(raw_df)
 
     st.markdown("### 🔍 Filters")
@@ -170,7 +197,7 @@ with st.sidebar:
     sel_seg = st.multiselect("Segment", SEG_ORDER, default=SEG_ORDER)
 
 
-# ── SCORE & FILTER ──────────────────────────────────────────────────────────────
+# ── SCORE & FILTER ────────────────────────────────────────────────────────────
 # apply_weights is fast (no I/O) so no caching needed
 scored_df = apply_weights(customer_df, normalized_weights)
 
@@ -188,13 +215,13 @@ else:
 
 # Only display the rest of the app if fdf is not empty
 if not fdf.empty:
-    # ── HEADER ────────────────────────────────────────────────────────────────────
+    # ── HEADER ────────────────────────────────────────────────────────────────
     st.title("🛍️ Customer Growth Copilot")
     st.caption(f"Showing **{len(fdf):,}** of {len(scored_df):,} customers · Adjust filters & weights in the sidebar")
     st.markdown("---")
 
 
-    # ── KPI CARDS ─────────────────────────────────────────────────────────────────
+    # ── KPI CARDS ─────────────────────────────────────────────────────────────
     def kpi(col, val, label, color):
         col.markdown(f"""
         <div class="metric-card" style="border-color:{color}">
@@ -211,7 +238,7 @@ if not fdf.empty:
     st.markdown("<br>", unsafe_allow_html=True)
 
 
-    # ── ROW 1: DONUT + HISTOGRAM ──────────────────────────────────────────────────
+    # ── ROW 1: DONUT + HISTOGRAM ──────────────────────────────────────────────
     c1, c2 = st.columns([1, 1.6])
 
     with c1:
@@ -252,7 +279,7 @@ if not fdf.empty:
         st.plotly_chart(fig_hist, use_container_width=True)
 
 
-    # ── ROW 2: SCATTER + BAR ──────────────────────────────────────────────────────
+    # ── ROW 2: SCATTER + BAR ──────────────────────────────────────────────────
     c3, c4 = st.columns(2)
 
     with c3:
@@ -296,7 +323,7 @@ if not fdf.empty:
         st.plotly_chart(fig_bar, use_container_width=True)
 
 
-    # ── ACTION MAP ────────────────────────────────────────────────────────────────
+    # ── ACTION MAP ────────────────────────────────────────────────────────────
     st.markdown("---")
     st.subheader("📋 Recommended Actions by Segment")
     actions = {
@@ -319,7 +346,7 @@ if not fdf.empty:
         </div>""", unsafe_allow_html=True)
 
 
-    # ── CUSTOMER EXPLORER ──────────────────────────────────────────────────────────
+    # ── CUSTOMER EXPLORER ─────────────────────────────────────────────────────
     st.markdown("---")
     st.subheader("🔎 Customer Explorer")
 
