@@ -1,10 +1,10 @@
-# 🛍️ Retail Sales Analysis - Customer Growth Copilot
+# Retail Sales Analysis - Customer Growth Copilot
 
-## 🔗 **[📊 OPEN DASHBOARD FOR RECRUITERS](https://yesimg-retail-sales.streamlit.app/)** ← Click Here
-
+## 🔗 **[📊 OPEN DASHBOARD FOR RECRUITERS](https://f5d61740-fc33-4128-9ddf-7805db93c600-00-330s7p54nm4a2.picard.replit.dev/)** ← Click Here
+#### NOTE: You´ll need to pass it a raw "csv" file, so please download the customer_shopping_behavior.csv to get started. ####
 ---
 
-check the result here 👉 [Customer Growth Copilot.pdf](https://github.com/user-attachments/files/28588077/Customer.Growth.Copilot.pdf)
+OR check the result here 👉 [Customer Growth Copilot.pdf](https://github.com/user-attachments/files/28588077/Customer.Growth.Copilot.pdf)
 
 # Customer Growth Copilot: A Data-Driven Solution for Retail Leadership
 
