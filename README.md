@@ -1,6 +1,6 @@
 # Retail Sales Analysis - Customer Growth Copilot
 
-## 🔗 **[📊 OPEN DASHBOARD FOR RECRUITERS](https://fae5cbca-8b58-4441-bc0b-4f284abe20bb-00-2ln9swhcwffjh.picard.replit.dev//)** ← Click Here
+## 🔗 **[📊 OPEN DASHBOARD FOR RECRUITERS](https://retailsalesanalysis-2--yesimagnoli.replit.app///)** ← Click Here
 
 ---
 OR check the result here 👉 [Customer Growth Copilot.pdf](https://github.com/user-attachments/files/28588077/Customer.Growth.Copilot.pdf)
