@@ -3,15 +3,17 @@
 ## 🔗 **[📊 OPEN DASHBOARD FOR RECRUITERS](https://retailsalesanalysis-2--yesimagnoli.replit.app///)** ← Click Here
 
 ---
-OR check the result here 👉 [Customer Growth Copilot.pdf](https://github.com/user-attachments/files/28588077/Customer.Growth.Copilot.pdf)
+OR check the result here 👉 [Customer.Growth.Copilot.pptx](https://github.com/user-attachments/files/29043471/Customer.Growth.Copilot.pptx)
+
 
 # Customer Growth Copilot: A Data-Driven Solution for Retail Leadership
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/fe6a1c14-85fa-4d96-a2ba-552459a0f5b4" />
+
 
 ## 🎯 The Challenge
 
-As a supply chain analyst, One of the most recurrent pain point was: **data from SAP systems was complex, fragmented, and slow to process.** Every time leadership needed customer insights, it took days to manually extract, clean, and analyze data—all while business decisions waited.
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/47fb3047-8457-476d-bb78-3ec71c7ac323" />
 
-The question was simple but urgent: *How do we turn raw transactional data into actionable intelligence fast?*
 
 ## 🚀 The Journey
 
@@ -27,28 +29,12 @@ I built an **interactive Streamlit dashboard** that transforms raw customer data
 
 ### 📊 Real-Time Customer Intelligence
 
-The dashboard automatically segments **all customers into 4 strategic tiers** based on a sophisticated health score:
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/161cfa18-c527-41bd-acee-318b9a30aab2" />
 
-- **VIP Customers** (Score 75+): Your most valuable advocates
-- **Healthy Customers** (50-75): Growth opportunities
-- **At Risk Customers** (25-50): Churn warning signals
-- **Critical Customers** (<25): Urgent intervention needed
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/03d6a246-17b2-42e7-a9c0-325614804542" />
 
-### 🎚️ Flexible, Business-Driven Weights
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/3f0083b0-d922-4bfd-abd4-7c227abdd417" />
 
-Unlike static reports, leadership can **instantly adjust how the system weights customer value**—prioritizing subscription loyalty, purchase frequency, spending patterns, or review sentiment—all without touching code.
-
-- Marketing can test "what if" scenarios instantly
-- Regional managers can apply different strategies
-- No technical barriers to exploring data
-
-### 📋 Actionable Insights at a Glance
-
-The dashboard provides:
-- **KPI cards** showing total customers, average health scores, and segment breakdowns
-- **Visual analytics** revealing patterns: Who spends most? Which segments are most loyal? Where's churn happening?
-- **Recommended actions per segment**—from VIP loyalty rewards to critical customer win-back campaigns
-- **Searchable customer explorer** for deep-dive investigations
 
 ## 📈 The Business Impact
 
@@ -71,20 +57,11 @@ With clear customer segments and recommended actions, teams can:
 - **Optimize marketing spend** with precision targeting instead of broad campaigns
 - **Align cross-functional efforts** around shared customer health metrics
 
-### 📊 Data-Driven Culture
-By democratizing access to analytics, this tool shifts the organization toward data-driven decision-making at every level—not just the C-suite.
-
-## 🏁 The Bottom Line
-
-What started as a struggle to clean SAP data became a strategic asset. The **Customer Growth Copilot** isn't just a dashboard—it's an **automation engine that gives retail leadership the visibility they need to act fast**.
-
 **In retail, every day without customer insights is money left on the table. This solution puts that intelligence in the hands of the people who need it most.**
 
 ---
 
-## 🚀 Quick Start
-
-### Run Locally
+## 🚀 Quick Start to Run Locally
 
 ```bash
 git clone https://github.com/Yesimg/retail_sales_analysis.git
@@ -95,18 +72,8 @@ streamlit run customer_growth_copilot.py
 
 Then upload the `customer_shopping_behavior.csv` file to get started.
 
-## 📊 Key Features
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/17c04b0e-5a3b-47c7-b345-a227e1a3846f" />
 
-- Interactive customer segmentation
-- Real-time KPI metrics
-- Adjustable scoring weights
-- Segment performance analytics
-- Actionable recommendations
-- Customer explorer with search & export
-
-## 🛠️ Tech Stack
-
-**Streamlit** | **Pandas** | **NumPy** | **Plotly** | **Scikit-learn** | **Python**
 
 ---
 
