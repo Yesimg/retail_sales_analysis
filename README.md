@@ -3,16 +3,20 @@
 ## 🔗 **[📊 OPEN DASHBOARD FOR RECRUITERS](https://retailsalesanalysis-2--yesimagnoli.replit.app///)** ← Click Here
 
 ---
-OR check the result here 👉 [Customer.Growth.Copilot.pptx](https://github.com/user-attachments/files/29043471/Customer.Growth.Copilot.pptx)
+OR check the result here 👉 [Customer Growth Copilot.pptx](https://github.com/user-attachments/files/29072446/Customer.Growth.Copilot.pptx)
+
 
 
 # Customer Growth Copilot: A Data-Driven Solution for Retail Leadership
-<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/fe6a1c14-85fa-4d96-a2ba-552459a0f5b4" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/e2c49514-4f35-433a-b000-93b4c247e519" />
+
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/aa214619-15a5-45b9-9657-e2b633091869" />
 
 
 ## 🎯 The Challenge
 
-<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/47fb3047-8457-476d-bb78-3ec71c7ac323" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/4109498b-61bc-4e0f-95e0-3ee7d801b467" />
+
 
 
 ## 🚀 The Journey
@@ -29,12 +33,11 @@ I built an **interactive Streamlit dashboard** that transforms raw customer data
 
 ### 📊 Real-Time Customer Intelligence
 
-<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/161cfa18-c527-41bd-acee-318b9a30aab2" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/2020ee4c-e759-48eb-8017-0450c3f372b3" />
 
-<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/03d6a246-17b2-42e7-a9c0-325614804542" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/92d6d192-b8f0-4984-b305-275d2ac61ec5" />
 
-<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/3f0083b0-d922-4bfd-abd4-7c227abdd417" />
-
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/23511d84-a11d-4cd1-aab1-1aa09b021c03" />
 
 ## 📈 The Business Impact
 
@@ -72,7 +75,7 @@ streamlit run customer_growth_copilot.py
 
 Then upload the `customer_shopping_behavior.csv` file to get started.
 
-<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/17c04b0e-5a3b-47c7-b345-a227e1a3846f" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/a5fadc6b-3e6b-4f34-aa15-f8c7feacf718" />
 
 
 ---
